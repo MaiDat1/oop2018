@@ -56,11 +56,6 @@ public class Fraction {
         return phansomoi;
 
     }
-
-    public void Out( ){
-
-        System.out.println(numerator + "/" +denominator);
-    }
 }
 
 
