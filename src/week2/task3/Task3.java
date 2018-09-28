@@ -1,5 +1,6 @@
 package week2.task3;
-public class Xemay {
+public class Task3 {
+    class Xemay{
     private String name , theloai , hang;
     private int phankhoi;
     public Xemay(){
@@ -43,13 +44,13 @@ public class Xemay {
         System.out.println("The loai:"+theloai);
         System.out.println("Hang san xuat:"+hang);
     }
-    public static void Run(Xemay s1){
+    public void Run(Xemay s1){
         if(s1.phankhoi>=150)
             System.out.println(" Phan Khoi Lon ");
         else System.out.println(" Xe May Binh Thuong");
 
     }
-    public static void tocdo (Xemay s1, Xemay s2){
+    public  void tocdo (Xemay s1, Xemay s2){
         if(s1.phankhoi==s2.phankhoi){
             if(s1.hang==s2.hang)
                 System.out.println(" Bang nhau");
@@ -58,26 +59,6 @@ public class Xemay {
         else if(s1.phankhoi>s2.phankhoi)
             System.out.println("Toc do "+s1.name +" >" + " toc do "+s2.name);
         else System.out.println("Toc do "+s1.name +" <" + " toc do "+s2.name);
-
-
-    }
-    public static void main(String[] args) {
-        Xemay s1 = new Xemay();
-        s1.name = "Wave RSX";
-        s1.phankhoi = 110;
-        s1.theloai = "Xe so";
-        s1.hang = "Honda";
-        s1.getinfo();
-        Run(s1 );
-        System.out.println("----------------------------------");
-        Xemay s2 = new Xemay();
-        s2.name =" Jupiter";
-        s2.phankhoi = 200;
-        s2.theloai =" Xe Con";
-        s2.hang = " Yamaha";
-        s2.getinfo();
-        Run(s2);
-        tocdo(s1,s2);
 
 
     }
@@ -92,7 +73,7 @@ public class Xemay {
 
 
 
-public class ConMeo {
+    class ConMeo {
 
     private String name, chungloai, maulong;
     private Double cannang;
@@ -143,7 +124,7 @@ public class ConMeo {
     public void Keu(){
         System.out.println("Meo.....Meo.....");
     }
-    public static void SoSanh(ConMeo s1, ConMeo s2){
+    public void SoSanh(ConMeo s1, ConMeo s2){
         if(s1.cannang.equals(s2.cannang)  )
             System.out.println("Bang can nhau   ");
         else System.out.println(" Khong Bang Can Nhau");
@@ -155,24 +136,7 @@ public class ConMeo {
         else System.out.println("khong cung mau long");
     }
 
-    public static void main(String[] args) {
-        ConMeo s1 = new ConMeo();
-        ConMeo s2 = new ConMeo();
-        s1.name = "Shizuka";
-        s1.chungloai = "Meo Batu";
-        s1.maulong = "Xam";
-        s1.cannang = 4.2;
-        s1.getinfo();
-        s1.Keu();
-        s2.name=" Miku";
-        s2.chungloai = " Meo Ai Cap";
-        s2.maulong ="Xam";
-        s2.cannang= 3.0;
-        s2.getinfo();
-        s2.Keu();
-        SoSanh(s1,s2);
 
-    }
 
 }
 
@@ -180,7 +144,7 @@ public class ConMeo {
 
 
 
-public class CaiQuat {
+    class CaiQuat {
 
     private String name, feature;
     private int age;
@@ -220,30 +184,14 @@ public class CaiQuat {
     public void Run(){
         System.out.println("Vu....Vu....");
     }
-    public static boolean Sosanh(CaiQuat s1 , CaiQuat s2){
+    public boolean Sosanh(CaiQuat s1 , CaiQuat s2){
         if(s1.feature.equals(s2.feature)){
             return true;
         }
         else    return false;
     }
 
-    public static void main(String[] args) {
-        CaiQuat s1 = new CaiQuat();
-        s1.name = "Quat dien";
-        s1.age = 10;
-        s1.feature = "Quat treo tuong";
-        s1.getinfo();
-        s1.Run();
-        CaiQuat s2 = new CaiQuat();
-        s2.name = "Quat Giay";
-        s2.age = 1;
-        s2.feature = "Quay dung suc nguoi";
-        s2.getinfo();
-        s2.Run();
-        if(s1.feature.equals(s2.feature)== true)
-            System.out.println("Cung Loai");
-        else System.out.println(" Khac loai");
 
-    }
+}
 
 }

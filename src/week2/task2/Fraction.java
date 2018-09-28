@@ -8,9 +8,24 @@ public class Fraction {
         this.denominator=denominator;
 
     }
+    public  void setNumerator(int numerator){
+        this.numerator=numerator;
+    }
+    public void setDenominator(int denominator) {
+        this.denominator = denominator;
+    }
+    public int getNumerator(){
+        return numerator;
+    }
+    public int getDenominator(){
+        return denominator;
+    }
 
-    public boolean equals(Fraction obj){
-        return (numerator*obj.denominator == denominator*obj.numerator);
+    public boolean equals(Object obj){
+        Fraction fraction = (Fraction) obj;
+        if((this.numerator*((Fraction)obj).denominator - this.denominator*((Fraction)obj).denominator)==0  )
+            return true;
+        else return false;
     }
 
     public Fraction add(Fraction other) {
