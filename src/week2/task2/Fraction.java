@@ -61,16 +61,6 @@ public class Fraction {
 
         System.out.println(numerator + "/" +denominator);
     }
-    public static void main(String[] args){
-        Fraction a = new Fraction(1,2);
-        Fraction b = new Fraction(3,4);
-        Fraction c = a.add(b);
-        c.Out();
-        if(a.equals(b) == true)
-            System.out.println("bang nhau");
-        else
-            System.out.println("khong bang");
-    }
 }
 
 
