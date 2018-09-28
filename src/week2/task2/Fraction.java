@@ -1,30 +1,61 @@
 package week2.task2;
 
 public class Fraction {
-
-    // TODO: khai báo các thuộc tính
-
+    private int numerator;
+    private int denominator;
     public Fraction(int numerator, int denominator) {
-        // TODO: khởi tạo giá trị cho các thuộc tính numberator (tử số), denominator (mẫu số)
+        this.numerator= numerator;
+        this.denominator=denominator;
+
+    }
+
+    public boolean equals(Fraction obj){
+        return (numerator*obj.denominator == denominator*obj.numerator);
     }
 
     public Fraction add(Fraction other) {
-        // TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
-        return null;
+        Fraction phansomoi= new Fraction(numerator,denominator);
+        phansomoi.numerator = this.numerator*other.denominator + this.denominator * other.numerator;
+        phansomoi.denominator = this.denominator*other.denominator;
+        return phansomoi;
     }
 
     public Fraction subtract(Fraction other) {
-        // TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction mới
-        return null;
+        Fraction phansomoi = new Fraction(numerator,denominator);
+        phansomoi.numerator=this.numerator * other.denominator - this.denominator * other.numerator;
+        phansomoi.denominator = this.denominator * other.denominator;
+        return phansomoi;
     }
 
     public Fraction multiply(Fraction other) {
-        // TODO: Phương thức nhân hai phân số (this và other), trả về đối tượng Fraction mới
-        return null;
+        Fraction phansomoi = new Fraction(numerator,denominator);
+        phansomoi.numerator=this.numerator * other.numerator;
+        phansomoi.denominator = this.denominator * other.denominator;
+        return phansomoi;
     }
 
     public Fraction divide(Fraction other) {
-        // TODO: Phương thức chia hai phân số (this và other), trả về đối tượng Fraction mới
-        return null;
+        Fraction phansomoi = new Fraction(numerator,denominator);
+        phansomoi.numerator= this.numerator * other.denominator;
+        phansomoi.denominator= this.denominator * other.numerator;
+        return phansomoi;
+
+    }
+
+    public void Out( ){
+
+        System.out.println(numerator + "/" +denominator);
+    }
+    public static void main(String[] args){
+        Fraction a = new Fraction(1,2);
+        Fraction b = new Fraction(3,4);
+        Fraction c = a.add(b);
+        c.Out();
+        if(a.equals(b) == true)
+            System.out.println("bang nhau");
+        else
+            System.out.println("khong bang");
     }
 }
+
+
