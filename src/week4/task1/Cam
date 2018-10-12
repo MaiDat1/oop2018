@@ -25,8 +25,8 @@ public class Cam extends HoaQua {
     }
 
     public Cam(String mau, long soluong) {
-        mau = "xanh";
-        soluong = 2456023;
+        mau = "cam";
+        soluong = 3250;
     }
 
     @Override
