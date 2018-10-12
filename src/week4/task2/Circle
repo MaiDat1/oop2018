@@ -1,5 +1,5 @@
 
-
+package week4.task2;
 public class Circle extends Shape {
 
     public Double radius = 1.0;
