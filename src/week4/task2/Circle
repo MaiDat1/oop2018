@@ -1,0 +1,44 @@
+
+
+public class Circle extends Shape {
+
+    public Double radius = 1.0;
+
+    public Circle() {
+
+    }
+
+    public Circle(Double radius) {
+        this.radius = radius;
+    }
+
+    public Circle(Double radius, String color, boolean filled) {
+        this.radius = radius;
+        this.color = color;
+        this.filled = filled;
+    }
+
+    public Double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(Double radius) {
+        this.radius = radius;
+    }
+
+    public double getArea() { //Dien tich hinh tron
+        double area = (float) Math.PI * radius * radius;
+        return area;
+    }
+
+    public double getPerimeter() { // Chu vi hinh tron
+        double perimeter = (float) Math.PI * 2 * radius;
+        return perimeter;
+    }
+
+    @Override
+    public String toString() { //Xuat thong tin
+        return "Hinh tron    color:" + color + " filled:" + filled + " Area:" + getArea() + " Perimeter:" + getPerimeter();
+    }
+
+}
