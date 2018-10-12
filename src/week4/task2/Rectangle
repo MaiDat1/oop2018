@@ -1,4 +1,4 @@
-
+package week4.task2;
 public class Rectangle extends Shape {
 
     public Double width = 1.0;
