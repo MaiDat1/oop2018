@@ -1,0 +1,56 @@
+
+
+public class Square extends Rectangle {
+
+    public Double side;
+
+    public Square() {
+
+    }
+
+    public Square(Double side) {
+
+        this.side = side;
+    }
+
+    public Square(Double side, String color, boolean filled) {
+        this.side = side;
+        this.color = color;
+        this.filled = filled;
+    }
+
+    public Double getSide() {
+        return side;
+    }
+
+    public void setSide(Double side) {
+        this.side = side;
+    }
+
+    @Override
+    public Double getWidth() {
+        return width;
+    }
+
+    @Override
+    public void setWidth(Double width) {
+        this.width = width;
+    }
+
+    @Override
+    public Double getLength() {
+        return length;
+    }
+
+    @Override
+    public void setLength(Double length) {
+        this.length = length;
+    }
+
+    @Override
+    public String toString() {//Xuat thong tin
+        return "Hinh vuong   color:" + color + " filled:" + filled + " Length:" + getLength() + " Width:" + getWidth();
+
+    }
+
+}
